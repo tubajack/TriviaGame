@@ -30,6 +30,28 @@ function timeInterval(){
     $("#time-remaining").html("<h2> Time Remaining: " + limitedTime + "</h2>");
 
     //Convert the timer into minutes and seconds form
+    var convertedTime = timeConvert(limitedTime);
+
+    $("#time-remaining").text(convertedTime);
+}
+
+function timeConvert(time){
+    var minutes = Math.floor(time/60);
+    var seconds = time - (minutes * 60);
+
+    if(seconds < 10){
+        seconds = "0" + seconds;
+    }
+
+    if(minutes === 0){
+        minutes = "00";
+    }
+
+    else if(minutes < 10){
+        minutes = "0" + minutes;
+    }
+
+    return minutes + ":" + seconds;
 }
 
 //Array of question objects
