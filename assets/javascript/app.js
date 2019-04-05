@@ -7,8 +7,11 @@ var notAnswered = 0;
 var limitedTime = 300;
 var timeDown; 
 
+$("#time-remaining").append("<h2> Time Remaining: " + limitedTime + "</h2>");
+
 //Get the game to start as soon as the page loads
 window.onload = function(){
+    
 
 }
 
