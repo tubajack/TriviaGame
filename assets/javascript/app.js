@@ -32,7 +32,8 @@ function timeInterval(){
     //Convert the timer into minutes and seconds form
     var convertedTime = timeConvert(limitedTime);
 
-    $("#time-remaining").text(convertedTime);
+    //Display the converted time
+    $("#time-remaining").html("<h2> Time Remaining: " + convertedTime + "</h2>");
 }
 
 function timeConvert(time){
