@@ -8,6 +8,7 @@ var limitedTime = 300;
 var timeDown; 
 
 $("#time-remaining").append("<h2> Time Remaining: " + limitedTime + "</h2>");
+timeSet();
 
 //Get the game to start as soon as the page loads
 window.onload = function(){
@@ -15,7 +16,7 @@ window.onload = function(){
 
 }
 
-timeSet();
+//timeSet();
 
 //This function is going to set the interval for us
 function timeSet(){
@@ -25,7 +26,8 @@ function timeSet(){
 //This function is going to create the time for us
 function timeInterval(){
     limitedTime--;
-    console.log(limitedTime);
+    //console.log(limitedTime);
+    $("#time-remaining").html("<h2> Time Remaining: " + limitedTime + "</h2>");
 
     //Convert the timer into minutes and seconds form
 }
