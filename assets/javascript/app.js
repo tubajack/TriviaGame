@@ -18,6 +18,10 @@ window.onload = function(){
 
 //timeSet();
 
+//Set up the array of correct answers
+rightAnswers = ["Waco, TX", "Big 12", "Dr Pepper", "1886", "Linda Livingstone"];
+console.log(rightAnswers.length);
+
 //This function is going to set the interval for us
 function timeSet(){
     timeDown = setInterval(timeInterval, 1000); 
