@@ -7,7 +7,7 @@ var notAnswered = 0;
 var limitedTime = 300;
 var timeDown; 
 
-$("#time-remaining").append("<h2> Time Remaining: " + limitedTime + "</h2>");
+$("#time-remaining").append("<h2> Time Remaining: " + "05:00" + "</h2>");
 timeSet();
 
 //Get the game to start as soon as the page loads
@@ -42,6 +42,8 @@ function testAllQuestions(answers){
     
         //}
     }
+
+    $("#answers").html("Number correct : " + correctAnswers);
     console.log(correctAnswers);
     console.log(incorrectAnswers);
     console.log(notAnswered);
