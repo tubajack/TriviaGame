@@ -19,7 +19,7 @@ timeSet();
 function answers(){
     testAllQuestions(form);
 }
-rightAnswers = ["Waco, TX", "Big 12", "Dr. Pepper", "1886", "Linda Livingstone", "Michigan State Spartans", "Golden Wave Band"];
+rightAnswers = ["Waco, TX", "Big 12", "Dr. Pepper", "1886", "Linda Livingstone", "Michigan State Spartans", "Golden Wave Band", "McLane Stadium"];
 console.log(rightAnswers.length);
 
 //Loop through each and every question
