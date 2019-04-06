@@ -19,7 +19,8 @@ timeSet();
 function answers(){
     testAllQuestions(form);
 }
-rightAnswers = ["Waco, TX", "Big 12", "Dr. Pepper", "1886", "Linda Livingstone", "Michigan State Spartans", "Golden Wave Band", "McLane Stadium", "Green and Gold"];
+rightAnswers = ["Waco, TX", "Big 12", "Dr. Pepper", "1886", "Linda Livingstone", 
+"Michigan State Spartans", "Golden Wave Band", "McLane Stadium", "Green and Gold", "63"];
 console.log(rightAnswers.length);
 
 //Loop through each and every question
@@ -42,8 +43,6 @@ function testAllQuestions(answers){
     
         //}
     }
-
-    $("#time-remaining").append("<h2> Time Remaining: " + "00:00" + "</h2>");
 
     $("#answers").html("Number correct : " + correctAnswers + "<br>" + 
     "Number Incorrect: " + incorrectAnswers + "<br>" 
