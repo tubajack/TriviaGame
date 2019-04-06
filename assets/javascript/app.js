@@ -16,30 +16,35 @@ timeSet();
 //timeSet();
 
 //Set up the array of correct answers
-rightAnswers = ["Waco, TX", "Big 12", "Dr Pepper", "1886", "Linda Livingstone"];
+function answers(){
+    testAllQuestions(form);
+}
+rightAnswers = ["Waco, TX", "Big 12", "Dr. Pepper", "1886", "Linda Livingstone"];
 console.log(rightAnswers.length);
 
 //Loop through each and every question
-function testAllQuestions(form){
+function testAllQuestions(answers){
     for(var i = 0; i < rightAnswers.length; i++){
         var buttons = i * 4;
         //The inner for loop will be checking through each answer choice to ensure that we have the correct answer
-        for(var it = 0; it < 4; it++){
-            if(form.elements[i+buttons].check){
-                if(form.elements[i+buttons].value == rightAnswers[i]){
-                    correctAnswers++;
-                }
-                else if(form.elements[i+buttons].value !== rightAnswers[i]){
-                    incorrectAnswers++;
-                }
-                else{
-                    notAnswered++;
-                }
+        //for(var it = 0; it < 4; it++){
+           
+            if(answers[i].value === rightAnswers[i]){
+                correctAnswers++;
             }
+            else if(answers[i].value !== rightAnswers[i]){
+                incorrectAnswers++;
+            }
+            else{
+                notAnswered++;
+            }
+
     
-        }
+        //}
     }
     console.log(correctAnswers);
+    console.log(incorrectAnswers);
+    console.log(notAnswered);
 }
 
 
@@ -81,6 +86,15 @@ function timeConvert(time){
 
     return minutes + ":" + seconds;
 }
+
+$("#submitAnswer").on("click", function(e) {
+    e.preventDefault();
+    var answer = $('form').serializeArray();
+    console.log(answer);
+    testAllQuestions(answer);
+});
+
+
 
 //Array of question objects
 //Compare the answers 
