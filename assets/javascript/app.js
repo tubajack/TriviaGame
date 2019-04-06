@@ -11,16 +11,39 @@ $("#time-remaining").append("<h2> Time Remaining: " + limitedTime + "</h2>");
 timeSet();
 
 //Get the game to start as soon as the page loads
-window.onload = function(){
-    
 
-}
 
 //timeSet();
 
 //Set up the array of correct answers
 rightAnswers = ["Waco, TX", "Big 12", "Dr Pepper", "1886", "Linda Livingstone"];
 console.log(rightAnswers.length);
+
+//Loop through each and every question
+function testAllQuestions(form){
+    for(var i = 0; i < rightAnswers.length; i++){
+        var buttons = i * 4;
+        //The inner for loop will be checking through each answer choice to ensure that we have the correct answer
+        for(var it = 0; it < 4; it++){
+            if(form.elements[i+buttons].check){
+                if(form.elements[i+buttons].value == rightAnswers[i]){
+                    correctAnswers++;
+                }
+                else if(form.elements[i+buttons].value !== rightAnswers[i]){
+                    incorrectAnswers++;
+                }
+                else{
+                    notAnswered++;
+                }
+            }
+    
+        }
+    }
+    console.log(correctAnswers);
+}
+
+
+
 
 //This function is going to set the interval for us
 function timeSet(){
