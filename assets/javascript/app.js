@@ -4,10 +4,10 @@ var notAnswered = 0;
 
 //Set up the timer- Figure out how many seconds the user will get
 //Initialize the time to 5 minutes
-var limitedTime = 300;
+var limitedTime = 60;
 var timeDown; 
 
-$("#time-remaining").append("<h2> Time Remaining: " + "05:00" + "</h2>");
+$("#time-remaining").append("<h2> Time Remaining: " + "01:00" + "</h2>");
 timeSet();
 
 //Get the game to start as soon as the page loads
@@ -69,6 +69,11 @@ function timeInterval(){
 
     //Display the converted time
     $("#time-remaining").html("<h2> Time Remaining: " + convertedTime + "</h2>");
+
+    //What happens when we run out of time? 
+    if(limitedTime === 0){
+        finalResults();
+    }
 }
 
 function timeConvert(time){
