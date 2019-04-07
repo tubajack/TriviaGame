@@ -5,3 +5,9 @@ div{
 body{
     background-color: gold;
 }
+
+h2{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
