@@ -106,13 +106,14 @@ function finalResults(){
 
     $("#time-remaining").hide();
 
-    $("#answers").html("<h3> Number Correct: " + correctAnswers + "<br>" + 
+    $("#answers").html("<h2> Number Correct: " + correctAnswers + "<br>" + 
     "Number Incorrect: " + incorrectAnswers + "<br>" 
-    + "Unanswered: " + notAnswered + "</h3>");
+    + "Unanswered: " + notAnswered + "</h2>");
 
     console.log(correctAnswers);
     console.log(incorrectAnswers);
     console.log(notAnswered);
+
 
 }
 
