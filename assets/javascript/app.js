@@ -47,13 +47,7 @@ function testAllQuestions(answers){
         //}
     }
 
-    $("#answers").html("Number correct : " + correctAnswers + "<br>" + 
-    "Number Incorrect: " + incorrectAnswers + "<br>" 
-    + "Unanswered: " + notAnswered);
-
-    console.log(correctAnswers);
-    console.log(incorrectAnswers);
-    console.log(notAnswered);
+    finalResults();
 }
 
 
@@ -102,6 +96,17 @@ $("#submitAnswer").on("click", function(e) {
     console.log(answer);
     testAllQuestions(answer);
 });
+
+function finalResults(){
+    $("#answers").html("Number correct: " + correctAnswers + "<br>" + 
+    "Number Incorrect: " + incorrectAnswers + "<br>" 
+    + "Unanswered: " + notAnswered);
+
+    console.log(correctAnswers);
+    console.log(incorrectAnswers);
+    console.log(notAnswered);
+
+}
 
 
 
