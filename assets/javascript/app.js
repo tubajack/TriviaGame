@@ -101,9 +101,9 @@ function finalResults(){
 
     $("#time-remaining").hide();
 
-    $("#answers").html("Number correct: " + correctAnswers + "<br>" + 
+    $("#answers").html("<h3> Number Correct: " + correctAnswers + "<br>" + 
     "Number Incorrect: " + incorrectAnswers + "<br>" 
-    + "Unanswered: " + notAnswered);
+    + "Unanswered: " + notAnswered + "</h3>");
 
     console.log(correctAnswers);
     console.log(incorrectAnswers);
