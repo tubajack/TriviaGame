@@ -4,16 +4,12 @@ var notAnswered = 0;
 
 //Set up the timer- Figure out how many seconds the user will get
 //Initialize the time to 5 minutes
-var limitedTime = 60;
+var limitedTime = 120;
 var timeDown; 
 
-$("#time-remaining").append("<h2> Time Remaining: " + "01:00" + "</h2>");
+$("#time-remaining").append("<h2> Time Remaining: " + "02:00" + "</h2>");
 timeSet();
 
-//Get the game to start as soon as the page loads
-
-
-//timeSet();
 
 //Set up the array of correct answers
 function answers(){
@@ -114,6 +110,7 @@ function finalResults(){
     console.log(incorrectAnswers);
     console.log(notAnswered);
 
+   
 
 }
 
