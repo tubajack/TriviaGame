@@ -21,7 +21,8 @@ function answers(){
 }
 rightAnswers = ["Waco, TX", "Big 12", "Dr. Pepper", "1886", "Linda Livingstone", 
 "Michigan State Spartans", "Golden Wave Band", "McLane Stadium", "Green and Gold", "63",
-"1948 and 1950", "Sonja Hogg", "Vivienne Malone-Mayes, Mathematics", "1907", "Kim Mulkey"];
+"1948 and 1950", "Sonja Hogg", "Vivienne Malone-Mayes, Mathematics", "1907", "Kim Mulkey",
+"TCU Horned Frogs"];
 console.log(rightAnswers.length);
 
 //Loop through each and every question
