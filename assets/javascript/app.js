@@ -98,6 +98,9 @@ $("#submitAnswer").on("click", function(e) {
 });
 
 function finalResults(){
+
+    $("#time-remaining").hide();
+
     $("#answers").html("Number correct: " + correctAnswers + "<br>" + 
     "Number Incorrect: " + incorrectAnswers + "<br>" 
     + "Unanswered: " + notAnswered);
